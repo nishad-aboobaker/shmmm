@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey! I Have Some Questions... 🤔</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    
+    <div class="container">
+        <!-- Landing Screen -->
+        <div id="landing-screen" class="screen active">
+            <div class="content">
+                <h1 class="title">Hey! 👋</h1>
+                <p class="subtitle">I have some VERY important questions for you...</p>
+                <p class="hint">(Don't worry, they're totally normal questions 😏)</p>
+                <button class="btn btn-primary" onclick="startQuiz()">Let's Go!</button>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" class="screen">
+            <div class="content">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="question-number" id="question-number">Question 1 of 6</p>
+                <h2 class="question-text" id="question-text"></h2>
+                <div class="answers" id="answers"></div>
+            </div>
+        </div>
+
+        <!-- Final Question Screen -->
+        <div id="final-screen" class="screen">
+            <div class="content">
+                <div class="emoji-header">🎉 ✨ 🌟</div>
+                <h2 class="final-question">So... I've been thinking...</h2>
+                <p class="final-text">Want to hang out this Sunday?</p>
+                <p class="final-subtext">We could grab food, explore somewhere new, or just chill!</p>
+                <p class="final-prompt">What do you say? 😊</p>
+                
+                <div class="final-buttons">
+                    <button class="btn btn-yes" id="yes-btn" onclick="handleYes()">
+                        Yes! Sounds fun! 🎊
+                    </button>
+                    <button class="btn btn-no" id="no-btn" onclick="handleNo()">
+                        Let me think... 🤔
+                    </button>
+                </div>
+                
+                <p class="reconsider-message" id="reconsider-message"></p>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="success-screen" class="screen">
+            <div class="content">
+                <div class="success-emoji">🎉</div>
+                <h1 class="success-title">YESSS!</h1>
+                <p class="success-text">This is going to be awesome!</p>
+                <p class="success-subtext">I'll text you the details soon.</p>
+                <p class="success-footer">Can't wait for Sunday! 🌟</p>
+                <div class="celebration-text">✨ It's a date! ✨</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
