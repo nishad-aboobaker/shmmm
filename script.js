@@ -29,7 +29,7 @@ const questions = [
         ]
     },
     {
-        question: "perelthe Pain Pnai okke keynjaaa",
+        question: "perelthe Paint Pani okke keynjaaa",
         answers: [
             "Illya",
             "Keynj",
